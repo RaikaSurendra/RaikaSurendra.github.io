@@ -1,26 +1,27 @@
 # Surendra Raika
 
-**Developer · Platform Architect · Systems Thinker**
+**Engineering Leader · Platform Architect · Systems Thinker**
 
 `ServiceNow` `Go` `Systems Programming` `Cloud-Native`
 
-> mcp protocol servers | servicenow platform engineering | systems programming | deep dives
+> architecting enterprise platforms | leading engineering teams | building what doesn't exist yet
 
 ---
 
 ## $ whoami
 
-Developer with deep expertise in **ServiceNow platform engineering**, **Go backend systems**, and a restless habit of pulling things apart to see how they work — from [jq's parser internals](https://github.com/RaikaSurendra/Random-Topics) to [operating system kernels](https://github.com/RaikaSurendra/oslab-6828) to [event-driven microservices](https://github.com/RaikaSurendra/go_asyncapi).
+Engineering leader and platform architect with 13+ years shipping enterprise systems at scale. I lead teams that build on **ServiceNow**, design **Go backend infrastructure**, and solve the kind of problems that sit at the intersection of platform engineering and distributed systems. When I'm not leading delivery, I'm usually somewhere deep in the stack — tracing through [jq's parser internals](https://github.com/RaikaSurendra/Random-Topics), writing [OS kernels from scratch](https://github.com/RaikaSurendra/oslab-6828), or designing [event-driven architectures](https://github.com/RaikaSurendra/go_asyncapi).
 
-I build production tooling (MCP servers, MID server replacements, onboarding platforms), explore systems programming across C++/Rust/Zig, and benchmark everything I can get my hands on.
+I've architected MCP protocol servers for AI-agent integration, built lightweight MID server replacements, designed full-stack onboarding platforms with chaos engineering baked in, and led cross-functional teams through complex platform migrations. I think in systems, ship in Go, and believe the best architecture decisions come from understanding the machine all the way down.
 
 | | |
 |---|---|
 | **Location** | India |
+| **Focus** | Platform architecture, engineering management, systems design |
 | **Languages** | Go, C++, C, Java, Python, JavaScript, Rust, Zig |
 | **Platforms** | ServiceNow, Docker, Kubernetes, Knative, Linux |
-| **Interests** | Protocol design, OS internals, load balancer architecture, caching systems |
-| **Currently** | MCP protocol servers, MIPT C++ coursework, multi-language algorithm benchmarking |
+| **Depth areas** | Protocol design, OS internals, load balancer architecture, distributed caching |
+| **Currently** | MCP protocol servers for AI agents, MIPT C++ systems coursework, cross-language benchmarking |
 
 ---
 
@@ -31,7 +32,7 @@ I build production tooling (MCP servers, MID server replacements, onboarding pla
 ![MCP Protocol](https://img.shields.io/badge/MCP_Protocol-8957e5?style=flat)
 ![REST APIs](https://img.shields.io/badge/REST_APIs-9e6a03?style=flat)
 
-MCP protocol server for AI-agent integration, lightweight MID server replacement with ECC queue proxy, custom UI components, workflow automation
+Architected an MCP protocol server enabling AI-agent integration with ServiceNow. Designed a lightweight MID server replacement with ECC queue proxy, eliminating vendor lock-in. Led custom UI component development and enterprise workflow automation at scale.
 
 ### Backend & Systems
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white)
@@ -39,7 +40,7 @@ MCP protocol server for AI-agent integration, lightweight MID server replacement
 ![Rust](https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white)
 ![Zig](https://img.shields.io/badge/Zig-F7A41D?style=flat&logo=zig&logoColor=white)
 
-Event-driven microservices, binary protocol design, string search algorithms, OS kernel development (MIT 6.828), template metaprogramming (MIPT)
+Designed event-driven microservice architectures and binary protocol layers. Built OS kernels (MIT 6.828), implemented string search algorithms in Zig, and explored C++ template metaprogramming through MIPT coursework. Systems thinking applied end-to-end.
 
 ### Infrastructure & Testing
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
@@ -47,7 +48,7 @@ Event-driven microservices, binary protocol design, string search algorithms, OS
 ![Jenkins](https://img.shields.io/badge/Jenkins-D24939?style=flat&logo=jenkins&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black)
 
-Load testing (Gatling, k6, Artillery), chaos engineering, container orchestration, Knative serverless, CI/CD pipelines, load balancer internals
+Established load testing frameworks (Gatling, k6, Artillery) and chaos engineering practices for production readiness. Drove container orchestration strategy with Kubernetes and Knative, owned CI/CD pipeline architecture, and studied load balancer internals from Pingora to custom implementations.
 
 ---
 
@@ -55,12 +56,12 @@ Load testing (Gatling, k6, Artillery), chaos engineering, container orchestratio
 
 | Project | Lang | Description |
 |---------|------|-------------|
-| [**go-mcp-servicenow**](https://github.com/RaikaSurendra/go-mcp-servicenow) | Go | MCP protocol server bridging AI agents to ServiceNow. Binary protocol, client-server auth, incident CRUD, caching with ETags, TLS, OAuth2, Prometheus metrics |
-| [**liteMIDgo**](https://github.com/RaikaSurendra/liteMIDgo) | Go | Lightweight MID server replacement. HTTP/HTTPS proxy to ServiceNow ECC queue, metrics agent, Docker production deployment, health monitoring |
-| [**newhireonboard**](https://github.com/RaikaSurendra/newhireonboard) | Java | Full-stack onboarding platform. Spring Boot + React, buddy matching algorithm, JWT auth, load testing (Gatling/k6/Artillery), chaos engineering |
-| [**Random-Topics**](https://github.com/RaikaSurendra/Random-Topics) | Mixed | Deep dives nobody asked for. jq source code analysis, UUID v7 Postgres benchmarks, Java caching patterns (Redis/RabbitMQ), load balancer internals |
-| [**leetcoder**](https://github.com/RaikaSurendra/leetcoder) | Java/C/Go/Rust | Multi-language algorithm archive. Every problem solved 3+ ways (brute force to optimal), JMH benchmarks, cross-language perf comparison |
-| [**oslab-6828**](https://github.com/RaikaSurendra/oslab-6828) | C | MIT 6.828 Operating Systems Engineering. Kernel development, virtual memory, system calls, process scheduling — from the ground up |
+| [**go-mcp-servicenow**](https://github.com/RaikaSurendra/go-mcp-servicenow) | Go | Production-grade MCP protocol server bridging AI agents to ServiceNow. Designed the binary protocol layer, auth flow, ETag caching, TLS mutual auth, OAuth2, and Prometheus observability |
+| [**liteMIDgo**](https://github.com/RaikaSurendra/liteMIDgo) | Go | Engineered a lightweight alternative to ServiceNow's MID server. Clean ECC queue proxy with built-in metrics, Docker-native deployment, and production health monitoring |
+| [**newhireonboard**](https://github.com/RaikaSurendra/newhireonboard) | Java | End-to-end onboarding platform I architected. Spring Boot + React, intelligent buddy matching, JWT auth, full load testing + chaos engineering harness |
+| [**Random-Topics**](https://github.com/RaikaSurendra/Random-Topics) | Mixed | Technical deep dives that sharpen architectural intuition. jq source analysis, UUID v7 Postgres benchmarks, caching patterns, load balancer internals |
+| [**leetcoder**](https://github.com/RaikaSurendra/leetcoder) | Java/C/Go/Rust | Systematic algorithm archive across four languages. Every problem solved 3+ ways, JMH benchmarks, cross-language performance analysis |
+| [**oslab-6828**](https://github.com/RaikaSurendra/oslab-6828) | C | MIT 6.828 OS Engineering. Built a kernel from scratch — virtual memory, syscalls, scheduling. Foundation work that makes you a better architect |
 
 <details>
 <summary><b>More projects →</b></summary>
@@ -110,4 +111,4 @@ Load testing (Gatling, k6, Artillery), chaos engineering, container orchestratio
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=safari&logoColor=white)](https://raikasurendra.github.io/)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:surendra.raika@yahoo.co.in)
 
-*Built with curiosity. Shipped with intent.*
+*Built with curiosity. Shipped with intent. Led with conviction.*
