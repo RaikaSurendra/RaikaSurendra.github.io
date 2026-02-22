@@ -4,62 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Surendra Raika - Manager, Application Development at ServiceNow">
+    <meta name="description" content="Surendra Raika - Developer · Platform Architect · Systems Thinker">
     <meta name="author" content="Surendra Raika">
-    <title>Surendra Raika | Resume</title>
+    <title>Surendra Raika | Developer · Platform Architect · Systems Thinker</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Prevent flash of wrong theme -->
+    <script>
+        (function() {
+            var t = localStorage.getItem('theme');
+            if (t === 'light' || t === 'dark') {
+                document.documentElement.setAttribute('data-theme', t);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                var h = new Date().getHours();
+                document.documentElement.setAttribute('data-theme', (h >= 7 && h < 19) ? 'light' : 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body>
-    <!-- Header Section -->
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="icon" id="themeIcon"></span>
+        <span class="label" id="themeLabel"></span>
+    </button>
+
     <div class="container">
-        <div class="header-section">
-            <h1>Surendra Raika</h1>
-            <h2>Manager, Application Development</h2>
-            <div class="header-info">
-                <p><a href="https://www.servicenow.com" target="_blank" rel="noopener">ServiceNow</a></p>
-                <p>Hyderabad, Telangana, India</p>
+
+        <!-- Header -->
+        <header class="hero">
+            <h1 class="hero-name">Surendra Raika</h1>
+            <p class="hero-title">Developer <span class="dot">&middot;</span> Platform Architect <span class="dot">&middot;</span> Systems Thinker</p>
+            <div class="hero-tags">
+                <span>ServiceNow</span>
+                <span>Go</span>
+                <span>Systems Programming</span>
+                <span>Cloud-Native</span>
             </div>
-        </div>
+            <div class="hero-status">
+                <span class="status-dot"></span>
+                <span class="typing-subtitle">mcp protocol servers &nbsp;|&nbsp; servicenow platform engineering &nbsp;|&nbsp; systems programming &nbsp;|&nbsp; deep dives<span class="cursor"></span></span>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-bar">
+            <a href="#about">whoami</a>
+            <a href="#expertise">expertise</a>
+            <a href="#experience">experience</a>
+            <a href="#projects">projects</a>
+            <a href="#skills">skills</a>
+            <a href="#interests">interests</a>
+        </nav>
 
         <!-- About Section -->
         <section id="about" class="section about-section">
-            <h3>About Me</h3>
+            <h3><span class="prompt">$</span> whoami</h3>
             <div class="about-content">
                 <p>
-                    I'm a Manager for Application Development at <a href="https://www.servicenow.com" target="_blank"
-                        rel="noopener">ServiceNow</a>, where I lead teams in building enterprise solutions and exploring
-                    the intersection of AI and platform engineering.
+                    Developer with deep expertise in <strong>ServiceNow platform engineering</strong>,
+                    <strong>Go backend systems</strong>, and a restless habit of pulling things apart to see how
+                    they work — from <a href="https://github.com/RaikaSurendra/Random-Topics" target="_blank" rel="noopener">jq's parser internals</a>
+                    to <a href="https://github.com/RaikaSurendra/oslab-6828" target="_blank" rel="noopener">operating system kernels</a>
+                    to <a href="https://github.com/RaikaSurendra/go_asyncapi" target="_blank" rel="noopener">event-driven microservices</a>.
                 </p>
                 <p>
-                    I'm passionate about C++, systems programming, and modern development practices. I enjoy sharing
-                    knowledge through tutorials and technical writing, recently publishing guides on Google Antigravity
-                    and exploring agentic AI systems.
+                    I build production tooling (MCP servers, MID server replacements, onboarding platforms),
+                    explore systems programming across C++/Rust/Zig, and benchmark everything I can get my hands on.
                 </p>
-                <p>
-                    I hold certifications including Architecture Excellence (ArchX), Certified Application Developer,
-                    and Certified System Administrator. I speak English, Hindi, and Rajasthani.
-                </p>
-                <div class="about-hashtags">
-                    #ServiceNowDevelopment #servicenow #servicenowindia #programming
+            </div>
+            <div class="info-block">
+                <div><span class="label">Location</span> <span class="value">India</span></div>
+                <div><span class="label">Languages</span> <span class="value">Go, C++, C, Java, Python, JavaScript, Rust, Zig</span></div>
+                <div><span class="label">Platforms</span> <span class="value">ServiceNow, Docker, Kubernetes, Knative, Linux</span></div>
+                <div><span class="label">Interests</span> <span class="value">Protocol design, OS internals, load balancer architecture, caching systems</span></div>
+                <div><span class="label">Currently</span> <span class="value">MCP protocol servers, MIPT C++ coursework, multi-language algorithm benchmarking</span></div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="section">
+            <h3><span class="prompt">$</span> cat /etc/expertise</h3>
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <h4>ServiceNow Engineering</h4>
+                    <div class="badges">
+                        <span class="badge badge-green">ServiceNow</span>
+                        <span class="badge badge-purple">MCP Protocol</span>
+                        <span class="badge badge-orange">REST APIs</span>
+                    </div>
+                    <p>MCP protocol server for AI-agent integration, lightweight MID server replacement with ECC queue proxy, custom UI components, workflow automation</p>
+                </div>
+                <div class="expertise-card">
+                    <h4>Backend & Systems</h4>
+                    <div class="badges">
+                        <span class="badge badge-blue">Go</span>
+                        <span class="badge badge-blue">C++</span>
+                        <span class="badge badge-gray">C</span>
+                        <span class="badge badge-red">Rust</span>
+                        <span class="badge badge-orange">Zig</span>
+                    </div>
+                    <p>Event-driven microservices, binary protocol design, string search algorithms, OS kernel development (MIT 6.828), template metaprogramming (MIPT)</p>
+                </div>
+                <div class="expertise-card">
+                    <h4>Infrastructure & Testing</h4>
+                    <div class="badges">
+                        <span class="badge badge-blue">Docker</span>
+                        <span class="badge badge-blue">Kubernetes</span>
+                        <span class="badge badge-red">Jenkins</span>
+                        <span class="badge badge-orange">Linux</span>
+                    </div>
+                    <p>Load testing (Gatling, k6, Artillery), chaos engineering, container orchestration, Knative serverless, CI/CD pipelines, load balancer internals</p>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
         <section id="experience" class="section career-section">
-            <h3>Experience</h3>
+            <h3><span class="prompt">$</span> git log --oneline --career</h3>
             <div class="timeline">
                 <div class="timeline-scroll">
                     <div class="timeline-item">
-
+                        <div class="timeline-company">
+                            <h4>ServiceNow</h4>
+                        </div>
                         <div class="timeline-position">
                             <h4>Application Development Manager</h4>
-                            <p class="position-duration">Jan 2024 - Present · 1 yr 11 mos</p>
+                            <p class="position-duration">Jan 2024 - Present</p>
                         </div>
                         <div class="timeline-position">
                             <h4>Senior Staff ServiceNow Developer</h4>
-                            <p class="position-duration">Apr 2023 - Jan 2024 · 10 mos</p>
+                            <p class="position-duration">Apr 2023 - Jan 2024</p>
                         </div>
                     </div>
 
@@ -98,7 +177,7 @@
                             <h4>Atos</h4>
                         </div>
                         <div class="timeline-position">
-                            <h4>ITSM Implementation and On-boarding Consultant and Manager</h4>
+                            <h4>ITSM Implementation Consultant</h4>
                             <p class="position-duration">Feb 2017 - May 2018</p>
                         </div>
                     </div>
@@ -122,26 +201,127 @@
                             <p class="position-duration">May 2011 - Aug 2014</p>
                         </div>
                     </div>
-                </div> <!-- end of timeline-scroll -->
-            </div> <!-- end of timeline -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <h3><span class="prompt">$</span> ls -la ~/projects --featured</h3>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4>go-mcp-servicenow</h4>
+                    <div class="project-lang">Go</div>
+                    <p>MCP protocol server bridging AI agents to ServiceNow. Binary protocol, client-server auth, incident CRUD, caching with ETags, TLS, OAuth2, Prometheus metrics.</p>
+                    <a href="https://github.com/RaikaSurendra/go-mcp-servicenow" target="_blank" rel="noopener"
+                        class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h4>liteMIDgo</h4>
+                    <div class="project-lang">Go</div>
+                    <p>Lightweight MID server replacement. HTTP/HTTPS proxy to ServiceNow ECC queue, metrics agent, Docker production deployment, health monitoring.</p>
+                    <a href="https://github.com/RaikaSurendra/liteMIDgo" target="_blank" rel="noopener"
+                        class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h4>newhireonboard</h4>
+                    <div class="project-lang">Java</div>
+                    <p>Full-stack onboarding platform. Spring Boot + React, buddy matching algorithm, JWT auth, load testing (Gatling/k6/Artillery), chaos engineering.</p>
+                    <a href="https://github.com/RaikaSurendra/newhireonboard" target="_blank" rel="noopener"
+                        class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h4>Random-Topics</h4>
+                    <div class="project-lang">Mixed</div>
+                    <p>Deep dives nobody asked for. jq source code analysis, UUID v7 Postgres benchmarks, Java caching patterns (Redis/RabbitMQ), load balancer internals.</p>
+                    <a href="https://github.com/RaikaSurendra/Random-Topics" target="_blank" rel="noopener"
+                        class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h4>leetcoder</h4>
+                    <div class="project-lang">Java / C / Go / Rust</div>
+                    <p>Multi-language algorithm archive. Every problem solved 3+ ways (brute force to optimal), JMH benchmarks, cross-language perf comparison.</p>
+                    <a href="https://github.com/RaikaSurendra/leetcoder" target="_blank" rel="noopener"
+                        class="project-link">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <h4>oslab-6828</h4>
+                    <div class="project-lang">C</div>
+                    <p>MIT 6.828 Operating Systems Engineering. Kernel development, virtual memory, system calls, process scheduling — from the ground up.</p>
+                    <a href="https://github.com/RaikaSurendra/oslab-6828" target="_blank" rel="noopener"
+                        class="project-link">View on GitHub</a>
+                </div>
+            </div>
+
+            <!-- More projects collapsible -->
+            <details class="more-projects">
+                <summary>More projects →</summary>
+                <table class="more-projects-table">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Lang</th>
+                            <th>What it does</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/RaikaSurendra/go_asyncapi" target="_blank" rel="noopener">go_asyncapi</a></td>
+                            <td>Go</td>
+                            <td>Event-driven microservices — API gateway, worker pattern, PostgreSQL, LocalStack/AWS</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/RaikaSurendra/go-design-patterns" target="_blank" rel="noopener">go-design-patterns</a></td>
+                            <td>Go</td>
+                            <td>Curated idiomatic Go patterns — creational, structural, behavioral, concurrency</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/RaikaSurendra/CPPLearningMIPT" target="_blank" rel="noopener">CPPLearningMIPT</a></td>
+                            <td>C++</td>
+                            <td>MIPT Master's coursework — nullptr_t, volatile, pointer safety, C++23 features</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/RaikaSurendra/whatJelly" target="_blank" rel="noopener">whatJelly</a></td>
+                            <td>Java</td>
+                            <td>Apache Jelly deep dive — full-stack web app, custom SQL tags, D3.js visualizations</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/RaikaSurendra/graceful-server-shutdown" target="_blank" rel="noopener">graceful-server-shutdown</a></td>
+                            <td>Go</td>
+                            <td>Graceful shutdown patterns for production Go servers</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/RaikaSurendra/Pulse" target="_blank" rel="noopener">Pulse</a></td>
+                            <td>Go</td>
+                            <td>Real-time monitoring for Proxmox, Docker, K8s — AI-powered insights, smart alerts</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/RaikaSurendra/zig-string-searching" target="_blank" rel="noopener">zig-string-searching</a></td>
+                            <td>Zig</td>
+                            <td>Boyer-Moore and Bitap string search algorithm implementations</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
         </section>
 
         <!-- Skills Section -->
         <section id="skills" class="section skills-section">
-            <h3>Skills</h3>
+            <h3><span class="prompt">$</span> cat /proc/skills</h3>
             <div class="skills-grid">
                 <div class="skill-category">
                     <h4>Technical</h4>
                     <div class="skill-tags">
-                        <span class="skill-tag">ServiceNow Platform Development</span>
+                        <span class="skill-tag">ServiceNow Platform</span>
+                        <span class="skill-tag">Go</span>
                         <span class="skill-tag">C++</span>
                         <span class="skill-tag">Systems Programming</span>
+                        <span class="skill-tag">MCP Protocol</span>
                         <span class="skill-tag">Generative AI</span>
                         <span class="skill-tag">Application Security</span>
-                        <span class="skill-tag">IT Operations Management</span>
                         <span class="skill-tag">Service Mapping</span>
-                        <span class="skill-tag">ServiceNow Discovery</span>
-                        <span class="skill-tag">Custom App Development</span>
+                        <span class="skill-tag">Discovery</span>
+                        <span class="skill-tag">Custom Apps</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -157,73 +337,128 @@
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h4>Business & Communication</h4>
+                    <h4>Infrastructure & Testing</h4>
                     <div class="skill-tags">
-                        <span class="skill-tag">Solution Selling</span>
-                        <span class="skill-tag">Business Requirements</span>
-                        <span class="skill-tag">Customer Requirements</span>
-                        <span class="skill-tag">Presentations</span>
-                        <span class="skill-tag">Relationship Building</span>
-                        <span class="skill-tag">Product Demonstration</span>
-                        <span class="skill-tag">Technical Sales</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Knative</span>
+                        <span class="skill-tag">Gatling</span>
+                        <span class="skill-tag">k6</span>
+                        <span class="skill-tag">Chaos Engineering</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Prometheus</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="section projects-section">
-            <h3>Projects</h3>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h4>LiteMIDgo</h4>
-                    <p>A lightweight middleware that acts as a web server proxy to ServiceNow instances, similar to
-                        ServiceNow's MID server but simpler and more focused on ECC queue operations. Built with Go for
-                        performance and reliability.</p>
-                    <a href="https://github.com/RaikaSurendra/liteMIDgo" target="_blank" rel="noopener"
-                        class="project-link">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h4>MCP-Go-ServiceNow</h4>
-                    <p>Go implementation of a Message Communication Protocol for ServiceNow integration with optimized
-                        binary message format, secure authentication, automatic reconnection, and seamless incident
-                        management operations.</p>
-                    <a href="https://github.com/RaikaSurendra/go-mcp-servicenow" target="_blank" rel="noopener"
-                        class="project-link">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h4>C++ Learning MIPT</h4>
-                    <p>C++ homework solutions and learning materials from MIPT (Moscow Institute of Physics and
-                        Technology). A comprehensive collection demonstrating advanced C++ concepts and problem-solving
-                        techniques.</p>
-                    <a href="https://github.com/RaikaSurendra/CPPLearningMIPT" target="_blank" rel="noopener"
-                        class="project-link">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <h4>AsyncAPI Go Project</h4>
-                    <p>Go-based API framework for building scalable and efficient APIs using microservices architecture.
-                        Features API gateway, request handlers, and PostgreSQL integration for high-performance
-                        asynchronous operations.</p>
-                    <a href="https://github.com/RaikaSurendra/go_asyncapi" target="_blank" rel="noopener"
-                        class="project-link">View on GitHub</a>
-                </div>
-            </div>
+        <!-- Interests Section -->
+        <section id="interests" class="section">
+            <h3><span class="prompt">$</span> cat ~/.interests</h3>
+            <div class="interests-block">  ┌─ ServiceNow Platform              ┌─ Systems Programming
+  │  MCP protocol for AI agents       │  C++ metaprogramming (MIPT)
+  │  MID server alternatives          │  OS kernel dev (MIT 6.828)
+  │  Custom UI components             │  Zig string search algorithms
+  │  ECC queue integration            │  Rust memory safety
+  │                                   │
+  ├─ Deep Technical Dives             ├─ Cloud-Native & Testing
+  │  jq parser source analysis        │  Kubernetes, Knative serverless
+  │  UUID v7 Postgres benchmarks      │  Load testing: Gatling, k6, Artillery
+  │  Caching: Redis + RabbitMQ        │  Chaos engineering experiments
+  │  Load balancers: Pingora,         │  Container orchestration
+  │  Traefik, building from scratch   │  Application security (ASPM)
+  │                                   │
+  └─ Event-Driven & APIs              └─ Developer Tooling
+     AsyncAPI microservices              Go design patterns
+     MCP protocol for LLM tooling        Graceful shutdown patterns
+     Worker patterns + LocalStack        Cross-language benchmarking</div>
         </section>
 
         <!-- Footer -->
         <footer class="footer">
             <div class="social-links">
-                <a href="mailto:your.email@example.com">email</a>
-                <a href="https://www.linkedin.com/in/surendraraika/" target="_blank" rel="noopener">linkedin</a>
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener">github</a>
-                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">twitter</a>
+                <a href="https://www.linkedin.com/in/surendraraika/" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="mailto:surendra.raika@yahoo.co.in">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                    Email
+                </a>
+                <a href="https://github.com/RaikaSurendra" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    GitHub
+                </a>
+                <a href="https://raikasurendra.github.io/" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.372 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm-.5 2.05v4.2a16.6 16.6 0 0 1-4.65-.95A9.94 9.94 0 0 1 11.5 2.05zM5.33 6.6A16.7 16.7 0 0 0 11.5 7.75V11.5H2.05A9.93 9.93 0 0 1 5.33 6.6zM2.05 12.5H11.5v3.75a16.7 16.7 0 0 0-6.17 1.15A9.93 9.93 0 0 1 2.05 12.5zm9.45 9.45a9.94 9.94 0 0 1-4.65-3.25 16.6 16.6 0 0 1 4.65-.95v4.2zm1-4.2a16.6 16.6 0 0 1 4.65.95 9.94 9.94 0 0 1-4.65 3.25v-4.2zm0-1.5V12.5h9.45a9.93 9.93 0 0 1-3.28 4.9A16.7 16.7 0 0 0 12.5 16.25zm0-4.75V7.75a16.7 16.7 0 0 0 6.17-1.15 9.93 9.93 0 0 1 3.28 4.9H12.5zm0-5.25V2.05a9.94 9.94 0 0 1 4.65 3.25 16.6 16.6 0 0 1-4.65.95z"/></svg>
+                    Portfolio
+                </a>
             </div>
-            <p>© 2025 Surendra Raika</p>
+            <p class="tagline">Built with curiosity. Shipped with intent.</p>
+            <p>&copy; 2026 Surendra Raika</p>
         </footer>
     </div>
 
     <script>
-        // Smooth scrolling for any future anchor links
+        // ── Theme System ──────────────────────────────────────────
+        // Priority: 1) localStorage override  2) system preference  3) time-of-day
+        (function () {
+            const root = document.documentElement;
+            const toggle = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const label = document.getElementById('themeLabel');
+
+            function getTimeOfDayTheme() {
+                const hour = new Date().getHours();
+                return (hour >= 7 && hour < 19) ? 'light' : 'dark';
+            }
+
+            function getSystemTheme() {
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+                    return 'light';
+                }
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    return 'dark';
+                }
+                return null;
+            }
+
+            function resolveTheme() {
+                const stored = localStorage.getItem('theme');
+                if (stored === 'light' || stored === 'dark') return stored;
+                const sys = getSystemTheme();
+                if (sys) return sys;
+                return getTimeOfDayTheme();
+            }
+
+            function applyTheme(theme) {
+                root.setAttribute('data-theme', theme);
+                icon.textContent = theme === 'dark' ? '\u263E' : '\u2600';
+                label.textContent = theme === 'dark' ? 'dark' : 'light';
+            }
+
+            // Apply on load
+            applyTheme(resolveTheme());
+
+            // Toggle on click — cycles: current → opposite, saves to localStorage
+            toggle.addEventListener('click', () => {
+                const current = root.getAttribute('data-theme') || resolveTheme();
+                const next = current === 'dark' ? 'light' : 'dark';
+                localStorage.setItem('theme', next);
+                applyTheme(next);
+            });
+
+            // Listen for system preference changes (live switch)
+            if (window.matchMedia) {
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                    if (!localStorage.getItem('theme')) {
+                        applyTheme(e.matches ? 'dark' : 'light');
+                    }
+                });
+            }
+        })();
+
+        // ── Smooth Scrolling ──────────────────────────────────────
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -233,6 +468,27 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
+                }
+            });
+        });
+
+        // ── Active Nav Highlight on Scroll ────────────────────────
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-bar a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.style.color = '';
+                link.style.background = '';
+                if (link.getAttribute('href') === '#' + current) {
+                    link.style.color = 'var(--color-primary)';
+                    link.style.background = 'var(--color-hover-bg)';
                 }
             });
         });
